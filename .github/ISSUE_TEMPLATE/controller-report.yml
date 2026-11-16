@@ -1,0 +1,37 @@
+name: Controller result or problem
+description: Report a working setup or describe a problem applying the fix.
+body:
+  - type: input
+    id: system
+    attributes:
+      label: macOS version and Mac architecture
+      placeholder: macOS 26.5, Apple Silicon
+    validations:
+      required: true
+  - type: input
+    id: controller
+    attributes:
+      label: Controller, connection, and physical input mode
+      placeholder: Logitech F710, USB receiver, D mode
+    validations:
+      required: true
+  - type: input
+    id: installation
+    attributes:
+      label: Storefront and installed SDL version
+      description: Run python3 hades_controller_fix.py inspect to see the SDL version.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What works and what does not?
+      description: Mention menus, movement, buttons, gameplay, and rumble separately.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Relevant output or log lines
+      description: Optional. Remove usernames and local paths. Do not attach saves, account configuration, or game binaries.
+      render: text
